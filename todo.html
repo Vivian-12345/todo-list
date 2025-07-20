@@ -101,7 +101,7 @@
             const addBtn = document.getElementById('addBtn');
             const todoList = document.getElementById('todoList');
             
-            // Load todos from localStorage
+            
             let todos = JSON.parse(localStorage.getItem('todos')) || [];
 
             function saveTodos() {
@@ -121,7 +121,7 @@
                     todoList.appendChild(todoItem);
                 });
 
-                // Add delete event listeners
+                
                 document.querySelectorAll('.delete-btn').forEach(btn => {
                     btn.addEventListener('click', (e) => {
                         e.stopPropagation();
@@ -151,7 +151,7 @@
                 renderTodos();
             }
 
-            // Event Listeners
+            
             addBtn.addEventListener('click', () => {
                 addTodo(todoInput.value);
             });
@@ -162,7 +162,7 @@
                 }
             });
 
-            // Initial render
+            
             renderTodos();
         });
     </script>
